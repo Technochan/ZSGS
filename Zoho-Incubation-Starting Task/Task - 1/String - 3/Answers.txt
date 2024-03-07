@@ -1,0 +1,142 @@
+countYZ
+public int countYZ(String str) {
+  int count = 0;
+  for(int i=0 ; i<str.length() ; i++){
+    if(i==str.length()-1 || !Character.isLetter(str.charAt(i+1))){
+    if((str.toLowerCase().charAt(i) == 'y' ||  str.toLowerCase().charAt(i) == 'z' )) count++;
+    }
+  }
+  return count;
+}
+
+
+withoutString
+public String withoutString(String base, String remove) {
+  String result = "";
+  for(int i=0 ; i<base.length() ; i++){
+    if(base.toLowerCase().startsWith(remove.toLowerCase() ,i)){
+      i = i+remove.length()-1;
+    } else { result += base.charAt(i);  }
+  }
+  return result;
+}
+
+
+equalIsNot
+public boolean equalIsNot(String str) {
+  int count = 0;
+  for(int i=0 ; i<str.length() ; i++){
+    if(str.startsWith("is",i))  count++;
+    if(str.startsWith("not",i)) count--;
+    }
+  }
+  return count == 0;
+}
+
+
+gHappy
+boolean happy = true;
+  for(int i=0 ; i<str.length() ; i++){
+    if(str.charAt(i) == 'g'){
+      if(i<1 && str.charAt(i) == 'g') happy = false;
+      else if(i == str.length()-1 && str.charAt(i-1) != 'g') happy = false;
+      else if(str.charAt(i-1) == 'g' || str.charAt(i+1) == 'g')  happy = true;
+      else if(str.charAt(i-1) != 'g' || str.charAt(i+1) != 'g') happy = false;
+    }
+  }
+return happy;
+
+
+countTriple
+public int countTriple(String str) {
+  if(str.length() < 3 ) return 0;
+  int count = 0;
+  for(int i=0 ; i<=str.length()-3 ; i++){
+    if((str.charAt(i) == str.charAt(i+1)) && (str.charAt(i+1) == str.charAt(i+2))) count++;
+  }
+  return count;
+}
+
+
+sumDigits
+public int sumDigits(String str) {
+  int sum = 0;
+  for(int i=0 ; i<str.length() ; i++){
+    if(Character.isDigit(str.charAt(i))) sum += Integer.parseInt(str.charAt(i)+"");
+  }
+  return sum;
+}
+
+
+sameEnds
+public String sameEnds(String string) {
+  int i= string.length() / 2 ;
+  for( ; i>=0  ; i-- ){
+    if(string.endsWith(string.substring(0,i))) return  string.substring(0,i);
+  }
+  return "";
+}
+
+
+mirrorEnds
+public String mirrorEnds(String string) {
+  StringBuilder reversed = new StringBuilder(string).reverse();
+  for(int mid = string.length() ; mid >= 0 ; mid--){
+    if(string.substring(0,mid).equals(reversed.substring(0,mid))) return string.substring(0,mid);
+  }
+  return "";
+}
+
+
+maxBlock
+public int maxBlock(String str) {
+  int count = 1, max = 0;
+  for (int i = 1; i < str.length(); i++) {
+    if (str.charAt(i) == str.charAt(i - 1)) {
+      count++;
+    } else {
+      count = 1;
+    }
+  max = Math.max(count, max);
+  }
+  return max;
+}
+
+
+sumNumbers
+public int sumNumbers(String str) {
+  int sum = 0 , val = 0;
+  for(int i=0 ; i<str.length() ; i++){
+    if(Character.isDigit(str.charAt(i))){
+      val = val * 10 + Integer.parseInt(str.charAt(i)+"");
+    } else { 
+      sum += val;
+      val = 0 ;
+    }
+  }
+  return sum+val;
+}
+
+
+notReplace
+public String notReplace(String str) {
+  StringBuilder result = new StringBuilder();
+  for (int i = 0; i < str.length(); i++) {
+    if (i - 1 >= 0 && Character.isLetter(str.charAt(i - 1)) ||
+        i + 2 < str.length() && Character.isLetter(str.charAt(i + 2))) {
+        result.append(str.charAt(i));
+    } else if (str.startsWith("is", i)) {
+        result.append("is not");
+        i++;
+    } else {
+        result.append(str.charAt(i));
+    } 
+  }
+   return result.toString();
+
+}
+
+
+
+
+

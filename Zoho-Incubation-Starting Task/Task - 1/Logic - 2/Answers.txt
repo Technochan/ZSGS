@@ -1,0 +1,83 @@
+//Dont use loop
+
+makeBricks
+public boolean makeBricks(int small, int big, int goal) {
+  return ( goal - Math.min(goal/5 , big ) *5 ) <= small;
+}
+
+
+loneSum
+public int loneSum(int a, int b, int c) {
+  if(a == b && b == c) return 0;
+  if(a == b) return c ;
+  if(a == c) return b;
+  if(b == c) return a;
+  return a+b+c;
+}
+
+
+luckySum
+public int luckySum(int a, int b, int c) {
+  if( a == 13) return 0;
+  else if( b == 13) return a;
+  else if( c == 13 ) return a+b;
+  return a+b+c;
+}
+
+
+noTeenSum
+public int noTeenSum(int a, int b, int c) {
+  return fixteen(a) + fixteen(b) + fixteen(c);
+}
+public int fixteen(int n){
+  if(n>= 13 && n<= 19 && n!= 15 && n!= 16) return 0;
+  return n;
+}
+
+
+roundSum
+public int roundSum(int a, int b, int c) {
+  return round10(a) + round10(b) + round10(c);
+}
+public int round10(int n){
+  if(n%10 < 5) return n - n%10;
+  return  n + (10 - (n%10));
+}
+
+
+closeFar
+public boolean closeFar(int a, int b, int c) {
+  if((Math.abs(b-a) <= 1 && Math.abs(c-a) >= 2 ) || (Math.abs(c-a) <= 1 && Math.abs(b-a) >= 2)){
+    if(Math.abs(c-b) >= 2 || Math.abs(b-c) >= 2) return true;
+  }
+  return false;
+}
+
+
+blackjack
+public int blackjack(int a, int b) {
+ if (a > 21 && b > 21) return 0;
+ else if (a > 21) return b;
+ else if (b > 21) return a;
+ 
+ return Math.max(a, b);
+}
+
+
+evenlySpaced
+public boolean evenlySpaced(int a, int b, int c) {
+  int low = Math.min(Math.min(a,b) , c);
+  int high = Math.max(Math.max(a,b) , c);
+  int mid = a+b+c - low - high;
+  return high - mid == mid - low;
+}
+
+
+makeChocolate
+public int makeChocolate(int small, int big, int goal) {
+    int val =  Math.abs(Math.min(goal/5,big)*5 - goal) ;
+    if(val <= small )return val;
+    return -1;
+}
+
+

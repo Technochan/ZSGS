@@ -1,0 +1,181 @@
+stringTimes
+public String stringTimes(String str, int n) {
+   String result = "";
+  while(n-- > 0){
+    result += str;
+  }
+  return result;
+}
+
+
+frontTimes
+public String frontTimes(String str, int n) {
+   String result = "";
+  String part = "";
+  if(str.length() < 3){
+    part = str;
+  } else if(str.length() >= 3){
+    part = str.substring(0,3);
+  }
+  
+  while(n-- >= 1) result += part;
+  return result;
+}
+
+
+countXX
+int countXX(String str) {
+   int count = 0;
+  for(int i=1 ; i<str.length() ; i++){
+    if(str.charAt(i-1) == 'x' && str.charAt(i) == 'x') count++;
+  }
+  return count;
+}
+
+
+doubleX
+boolean doubleX(String str) {
+  int index = str.indexOf("x");
+  if (index < 0) return false;
+  if (index+1 >= str.length()) return false; 
+  return str.substring(index+1, index+2).equals("x");
+}
+
+
+stringBits
+public String stringBits(String str) {
+   String  answer = "";
+  for(int i=0 ; i<str.length() ; i = i+2){
+    answer += str.substring(i,i+1);
+  } return answer;
+}
+
+
+stringSplosion
+public String stringSplosion(String str) {
+    String result = "";
+  int i = 0;
+  
+  while(str.length() > i){
+    result += str.substring(0,i+1);
+    i++;
+  }
+  return result ;
+}
+
+
+last2
+public int last2(String str) {
+  int count = 0;
+  if(str.length() < 2) return count;
+  String endPart = str.substring(str.length()-2 ,str.length()); 
+  for(int i=1 ; i<str.length()-1 ; i++){
+    if(str.substring(i-1,i+1).equals(endPart)) count ++;
+  }
+  return count;
+}
+
+
+arrayCount9
+public int arrayCount9(int[] nums) {
+  int count = 0;
+  for(int i :  nums) {
+    if(i == 9) count++;
+  }
+  return count;
+}
+
+
+arrayFront9
+public boolean arrayFront9(int[] nums) {
+  for(int i=0 ; i<nums.length && i<=3 ; i++){
+    if(nums[i] == 9) return true;
+  }
+  return false;
+}
+
+
+array123
+public boolean array123(int[] nums) {
+    for(int i=0 ; i<nums.length-2 ; i++){
+    if(nums[i]==1 && nums[i+1] == 2 && nums[i+2] == 3) return true;
+  } return false;
+}
+
+
+stringMatch
+public int stringMatch(String a, String b) {
+  int count = 0;
+  for(int i=1 ; i<a.length() ; i++){
+    if((i+1 <= b.length()) && b.substring(i-1,i+1).contains(a.substring(i-1,i+1)) ) count++;
+  }
+	return count;
+}
+
+
+stringX
+public String stringX(String str) {
+   String result ="";
+ for(int i=0 ; i<str.length() ; i++){
+   if((i==0 || i == str.length()-1 ) ||  str.charAt(i) != 'x') result += str.charAt(i);
+  }
+  return result;
+}
+
+
+altPairs
+public String altPairs(String str) {
+  String result = "";
+  for(int i=0 ; i<str.length() ; ){
+    result += str.charAt(i);
+    if( i%2 != 0)  i=i+3;
+    else i++;
+  }
+  return result;
+}
+
+
+stringYak
+public String stringYak(String str) {
+  String result = "";
+  for(int i=0 ; i<str.length() ; ){
+    if( (i+2 < str.length()) && ( str.charAt(i)=='y' && str.charAt(i+2) == 'k')){
+      i = i+3 ;
+    } else {
+      result += str.charAt(i++);
+    }
+  }
+  return result;
+}
+
+
+array667
+public int array667(int[] arr) {
+  int count = 0;
+  for(int i = 1 ; i<arr.length ; i++){
+    if( (arr[i-1]==6 && arr[i] == 6) || (arr[i-1]==6 && arr[i] == 7)) count++;
+  }
+  return count;
+}
+
+
+noTriples
+public boolean noTriples(int[] arr) {
+   if(arr.length < 3) return true;
+  for(int i=0 ; i<arr.length-2 ; i++){
+    if((arr[i] == arr[i+1]) && arr[i+1] == arr[i+2]) return false;
+  }
+  return true;
+}
+
+
+
+has271
+public boolean has271(int[] arr) {
+  if(arr.length < 3) return false;
+  for(int i=0 ; i<arr.length - 2 ; i++){
+    int val = arr[i];
+        if((arr[i+1] == val+5) && (  Math.abs((arr[i+2]-(val-1))) <= 2) ) return true;
+  }
+  return false;
+}

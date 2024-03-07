@@ -1,0 +1,162 @@
+maxSpan
+public int maxSpan(int[] nums) {
+  int maxSpan = 0;
+  for(int i=0 ; i<nums.length ; i++){
+    for(int j=nums.length - 1 ; j>=0 ; j--){
+      if(nums[i] == nums[j]){
+        maxSpan = Math.max(maxSpan,(j-i+1));
+        break;
+      }
+    }
+  }
+  return maxSpan;
+}
+
+
+fix34
+public int[] fix34(int[] nums) {
+  int swaped = 0;
+  for(int i=0 ; i<nums.length ; i++){
+    if(nums[i] == 3 && nums[i+1] != 4){
+      for(int j=swaped ; j<nums.length ; j++){
+        if(nums[j] == 4){
+          int temp = nums[i+1];
+          nums[i+1] = nums[j];
+          nums[j] = temp;
+          swaped = j+1;
+          break;
+        }
+      }
+    }
+  }
+  return nums;
+}
+
+
+
+fix45
+public int[] fix45(int[] nums) {
+  String swaped = "";
+  for(int i=0 ; i<nums.length ; i++){
+    if(nums[i] == 4 && nums[i+1] != 5){
+      for(int j=0 ; j<nums.length ; j++){
+         if( (nums[j] == 5 && !swaped.contains(j+"")) ){
+          int temp = nums[i+1];
+          nums[i+1] = nums[j];
+          nums[j] = temp;
+          swaped += i+1+"";
+          break;
+        }
+      }
+    } else if(nums[i] == 4 && nums[i+1] == 5) swaped += i+1+"";
+  }
+  return nums;
+}
+
+
+
+canBalance
+public boolean canBalance(int[] nums) {
+  int leftSum = 0;
+  int rightSum = 0;
+  
+  int left = 0 , right = nums.length-1;
+  while(left <= right ){
+    if(leftSum < rightSum ) {
+      leftSum += nums[left++];
+      continue;
+    }
+    if(leftSum > rightSum ){
+      rightSum += nums[right--];
+      continue;
+    }
+    if(leftSum == rightSum){
+      if(left == right){
+        leftSum += nums[left];
+        break;
+      }
+      leftSum += nums[left++];
+      rightSum += nums[right--];
+    }
+  }
+  return leftSum == rightSum ;
+}
+
+
+
+linearIn
+public boolean linearIn(int[] outer, int[] inner) {
+  int i=0;
+  for(int j=0 ; j<outer.length && inner.length > 0 ; j++){
+    if(outer[j] == inner[i]){
+      if(++i == inner.length) return true;
+    }
+  }
+  return i == inner.length;
+}
+
+
+squareUp
+public int[] squareUp(int n) {
+  int arr[] = new int[n*n] ;
+  int last = arr.length -1 ;
+  
+  for(int i = 0 ; i<n ; i++){
+    for(int j = 1 ; j <= n-i ; j++){
+      arr[last] = j ;
+      last--;
+    }
+    last = last - i;
+  }
+  return arr;
+}
+
+
+seriesUp
+public int[] seriesUp(int n) {
+  int arr[] = new int[n*(n+1)/2];
+  int index = 0;
+  for(int i=1 ; i<=n ; i++){
+    for(int j=1 ; j<=i   ; j++){
+      arr[index++] = j; 
+    }
+  }
+  return arr;
+}
+
+
+maxMirror
+public int maxMirror(int[] nums) {
+  int maxMirrorLength = 0;
+  for (int i = 0; i < nums.length; i++) {
+    for (int j = nums.length - 1; j >= 0; j--) {
+      int count = 0 ,indexI = i , indexJ = j;
+      while (indexI < nums.length && indexJ >= 0 && nums[indexI] == nums[indexJ]) {
+        count++;
+        indexI++;
+        indexJ--;
+      }
+    maxMirrorLength = Math.max(maxMirrorLength, count); 
+    }
+  }
+ return maxMirrorLength;
+}
+
+
+
+countClumps
+public int countClumps(int[] nums) {
+  int count = 0;
+  int n= -1;
+  
+  for(int i=1 ; i<nums.length ; i++){
+    if(nums[i] == n) continue;
+    else n = -1;
+    
+    if(nums[i-1] == nums[i]){
+      count++;
+      n=nums[i];
+    } 
+  }
+   return count ;
+}
