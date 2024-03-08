@@ -1,7 +1,10 @@
 package Day_1;
 
-public class Coordinates {
+import java.util.Scanner;
+
+class Coordinates {
+
 	public static void main(String[] args) {
-		
 	}
+
 }

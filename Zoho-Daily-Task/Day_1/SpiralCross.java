@@ -1,5 +1,6 @@
 package Day_1;
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class SpiralCross {
@@ -35,11 +36,14 @@ public class SpiralCross {
 		
 	}
 	public static void print(int[][] mat) {
-        for (int[] ints : mat) {
-            for (int anInt : ints) {
-                System.out.print(anInt + " ");
-            }
-            System.out.println();
-        }
+		for(int i=0 ; i< mat.length ; i++){
+			for(int j=0 ; j<mat[i].length ; j++){
+				if(j >= i){
+					System.out.print(mat[i][j]+"  ");
+				} else System.out.print("   ");
+			}
+			System.out.println();
+		}
+//   5
 	}
 }

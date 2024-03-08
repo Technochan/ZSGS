@@ -10,7 +10,7 @@ public class zigzag {
 		System.out.println("Enter the Number of rows");
 		int n = scan.nextInt();
 		char[][] mat = new char[n][s.length()-n];
-
+		makeEmpty(mat);
 		int row = 0;
 		int col = 0;	
 		
@@ -32,6 +32,14 @@ public class zigzag {
 				System.out.print(mat[i][j]+" ");
 			}
 			System.out.println();
+		}
+	}
+
+	public static void makeEmpty(char[][] mat) {
+		for(int i=0 ; i<mat.length ; i++) {
+			for(int j=0 ; j<mat[i].length ; j++) {
+				mat[i][j] = ' ';
+			}
 		}
 	}
 }
