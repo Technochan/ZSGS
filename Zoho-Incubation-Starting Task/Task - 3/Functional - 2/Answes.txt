@@ -1,0 +1,70 @@
+noNeg
+public List<Integer> noNeg(List<Integer> nums) {
+  nums.removeIf(n -> n < 0);
+  return nums;
+}
+
+
+no9
+public List<Integer> no9(List<Integer> nums) {
+  nums.removeIf(n -> n%10 == 9);
+  return nums;
+}
+
+
+noTeen
+public List<Integer> noTeen(List<Integer> nums) {
+  nums.removeIf(n -> n >= 13 && n <= 19);
+  return nums;
+}
+
+
+noZ
+public List<String> noZ(List<String> strings) {
+  strings.removeIf(s -> s.contains("z"));
+  return strings;
+}
+
+
+noLong
+public List<String> noLong(List<String> strings) {
+  strings.removeIf(s -> s.length() > 3);
+  return strings;
+}
+
+
+no34
+public List<String> no34(List<String> strings) {
+  strings.removeIf(s -> s.length() == 3 || s.length() == 4);
+  return strings;
+}
+
+
+noYY
+public List<String> noYY(List<String> strings) {
+ return strings.stream()
+                  .map(s -> s + "y")
+                  .filter(s -> !s.contains("yy"))
+                  .collect(Collectors.toList());
+}
+
+
+two2
+public List<Integer> two2(List<Integer> nums) {
+  return nums.stream()
+             .map(n -> n*2)
+             .filter(n -> n%10 != 2)
+             .collect(Collectors.toList());
+}
+
+
+square56
+public List<Integer> square56(List<Integer> nums) {
+  return nums.stream()
+             .map(n -> n*n+10)
+             .filter(n -> n%10 != 5 && n%10 != 6)
+             .collect(Collectors.toList());
+}
+
+
+

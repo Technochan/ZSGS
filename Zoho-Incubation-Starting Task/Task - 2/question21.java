@@ -2,7 +2,7 @@ package zoho_graduate_Studies;
 
 public class question21 {
 	public static void main(String[] args) {
-		int n = 9;
+		int n = 10;
 		
 		for(int i=1 ; i<=n ; i++) {
 			int num = 2; 

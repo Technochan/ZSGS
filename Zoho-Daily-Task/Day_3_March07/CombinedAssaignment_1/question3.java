@@ -51,6 +51,7 @@ public class question3 {
             checkBmi(name,weight,height);
         }
         Bmi.print();
+        scan.close();
     }
     public static void checkBmi(String name , float weight , float height){
         double val =  weight / (height/100 * height/100 );

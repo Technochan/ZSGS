@@ -18,10 +18,16 @@ public boolean scores100(int[] scores) {
 
 
 scoresClump
-
-
-
-
+public boolean scoresClump(int[] scores) {
+		for(int i=0 ; i < scores.length-2 ; i++ ){
+			int sum = 0;
+			for(int j=i+1 ; j <= i+2 ; j++){
+				sum +=   Math.abs(scores[j-1] - scores[j]);
+			}
+			if(sum <= 2) return true;
+		}
+		return false;
+}
 
 
 
@@ -80,9 +86,14 @@ public boolean hasOne(int n) {
 
 
 dividesSelf
-
-
-
+public boolean dividesSelf(int n) {
+  int val = n;
+  while(n > 0){
+    if(n%10 == 0 || val % (n%10) != 0) return false;
+    n = n/10;
+  }
+  return true;
+}
 
 
 copyEvens
@@ -185,11 +196,18 @@ public int sumHeights(int[] heights, int start, int end) {
 
 
 sumHeights2
-
-
-
-
-
+public int sumHeights2(int[] heights, int start, int end) {
+		int sum = 0;
+		for(int i =start ; i<end ; i++){
+			if(heights[i] - heights[i+1] >= 0) {
+				sum += (heights[i] - heights[i+1]);
+			}
+			else {
+				sum += Math.abs((heights[i] - heights[i + 1])  *  2 );
+			}
+		}
+		return sum;
+}
 
 
 
@@ -204,10 +222,16 @@ public int bigHeights(int[] heights, int start, int end) {
 
 
 userCompare
-
-
-
-
+public int userCompare(String aName, int aId, String bName, int bId) {
+		if(aName.compareTo(bName) > 0) return 1;
+		else if (aName.compareTo(bName) < 0) return -1;
+		else if (aName.compareTo(bName) == 0) {
+			if(aId < bId) return -1;
+			else if(aId > bId) return 1;
+			else return 0;
+		}
+		return 0;
+}
 
 
 

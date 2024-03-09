@@ -1,0 +1,114 @@
+word0
+public Map<String, Integer> word0(String[] strings) {
+  Map<String,Integer> map = new HashMap();
+  for(String s : strings) map.put(s,0);
+  return map;
+}
+
+
+wordLen
+public Map<String, Integer> wordLen(String[] strings) {
+  Map<String,Integer> map = new HashMap();
+  for(String s : strings) map.put(s,s.length());
+  return map;
+}
+
+
+pairs
+public Map<String, String> pairs(String[] strings) {
+  Map<String,String> map = new HashMap();
+  for(String s : strings) map.put(s.charAt(0)+"" , s.charAt(s.length()-1)+"");
+  return map;
+}
+
+
+wordCount
+public Map<String, Integer> wordCount(String[] strings) {
+  Map<String,Integer> map = new HashMap();
+  for(String s : strings){
+    if(!map.containsKey(s)) map.put(s,1);
+    else map.put(s,map.get(s)+1);
+  }
+  return map;
+
+
+firstChar
+public Map<String, String> firstChar(String[] strings) {
+  Map<String,String> map = new HashMap();
+  for(String s : strings){
+    if(!map.containsKey(s.charAt(0)+"")) map.put(s.charAt(0)+"",s);
+    else map.put(s.charAt(0)+"", map.get(s.charAt(0)+"") + s);
+  }
+  return map;
+}
+
+
+wordAppend
+public String wordAppend(String[] strings) {
+  String str = "";
+  Map<String,Integer> mp = new HashMap<String,Integer>();
+  for(String s : strings){
+    if(!mp.containsKey(s)) mp.put(s,1);
+    else mp.put(s, mp.get(s) + 1 );
+
+    if(mp.get(s) % 2 == 0) str += s;
+  }
+  return str;
+
+}
+
+
+wordMultiple
+public Map<String, Boolean> wordMultiple(String[] strings) {
+  String str = "";
+  Map<String, Boolean> mp = new HashMap<String, Boolean>();
+  for(String s : strings){
+    str += s;
+    if(str.indexOf(s) != str.lastIndexOf(s)) mp.put(s,true);
+    else mp.put(s,false);
+  }
+  return mp;
+}
+
+
+allSwap
+public String[] allSwap(String[] strings) {
+  Map<Character,Integer> mp = new HashMap<Character,Integer>();
+  for(int i=0 ; i<strings.length ; i++){
+    if(!mp.containsKey(strings[i].charAt(0))     )
+        mp.put(strings[i].charAt(0) , i);
+    else{
+      swap(strings, mp.get(strings[i].charAt(0)),i);
+      mp.remove(strings[i].charAt(0));
+    }
+  }
+  return strings;
+}
+public void swap(String[] arr, int i, int j){
+    String temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
+}
+
+
+
+firstSwap
+public String[] firstSwap(String[] strings) {
+  Map<Character,Integer> mp = new HashMap<Character,Integer>();
+  for(int i=0 ; i<strings.length ; i++){
+    if(!mp.containsKey(strings[i].charAt(0))     )
+        mp.put(strings[i].charAt(0) , i);
+    else{
+      if(mp.get(strings[i].charAt(0)) != -1 ){
+        swap(strings, mp.get(strings[i].charAt(0)),i);
+        mp.put(strings[i].charAt(0),-1);
+      }
+    }
+  }
+  return strings;
+}
+public void swap(String[] arr, int i, int j){
+    String temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
+}
