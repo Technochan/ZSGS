@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Java_Assaigments/Java_Assaigments.iml" filepath="$PROJECT_DIR$/Java_Assaigments/Java_Assaigments.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ZSGS.iml" filepath="$PROJECT_DIR$/ZSGS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Zoho-Incubation-Starting Task/Zoho-Incubation-Starting Task.iml" filepath="$PROJECT_DIR$/Zoho-Incubation-Starting Task/Zoho-Incubation-Starting Task.iml" />
+    </modules>
+  </component>
+</project>
