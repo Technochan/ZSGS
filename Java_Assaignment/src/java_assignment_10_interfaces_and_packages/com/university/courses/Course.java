@@ -4,15 +4,14 @@ package java_assignment_10_interfaces_and_packages.com.university.courses;
 public class Course {
     private int courseId;
     private String courseName;
-    private int creditHours;
+    private int coursePrice;
 
-    public Course(int courseId, String courseName, int creditHours) {
+    public Course(int courseId, String courseName, int coursePrice) {
         this.courseId = courseId;
         this.courseName = courseName;
-        this.creditHours = creditHours;
+        this.coursePrice = coursePrice;
     }
 
-    // Getters and setters
     public int getCourseId() {
         return courseId;
     }
@@ -29,11 +28,11 @@ public class Course {
         this.courseName = courseName;
     }
 
-    public int getCreditHours() {
-        return creditHours;
+    public int getCoursePrice() {
+        return coursePrice;
     }
 
-    public void setCreditHours(int creditHours) {
-        this.creditHours = creditHours;
+    public void setCoursePrice(int coursePrice) {
+        this.coursePrice = coursePrice;
     }
 }

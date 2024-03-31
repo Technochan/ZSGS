@@ -20,6 +20,7 @@ public class LibraryControlView {
     }
     public void initialControl() {
         System.out.println("Simple Library Application\n----------------------------");
+        System.out.println("\n\nDetails :\n----------\nCan Add Books and members\nIf book borrow happens That book will be unavailable\nIf the book Return is happens the book will be available to borrow again ");
     whileloop:
     while(true) {
         System.out.println(

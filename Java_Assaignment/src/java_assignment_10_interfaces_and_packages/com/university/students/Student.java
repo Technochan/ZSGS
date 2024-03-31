@@ -4,14 +4,18 @@ public class Student {
     private int id;
     private String name;
     private String email;
+    private long phoneNo;
+    private String address;
 
-    public Student(int id, String name, String email) {
+
+    public Student(int id, String name, String email, long phoneNo, String address) {
         this.id = id;
         this.name = name;
         this.email = email;
+        this.phoneNo = phoneNo;
+        this.address = address;
     }
 
-    // Getters and setters
     public int getId() {
         return id;
     }
@@ -35,4 +39,21 @@ public class Student {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public long getPhoneNo() {
+        return phoneNo;
+    }
+
+    public void setPhoneNo(long phoneNo) {
+        this.phoneNo = phoneNo;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
 }

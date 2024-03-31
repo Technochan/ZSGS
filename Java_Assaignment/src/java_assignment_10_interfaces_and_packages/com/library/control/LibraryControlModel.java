@@ -60,6 +60,8 @@ public class LibraryControlModel {
             libraryControlView.showText("Book :" + borrowBook.getBookName() + " Borrowed By " + borrowMember.getMemberName());
         } else if(type == 'R' && !borrowBook.getBookAvailable()) {
             borrowBook.setBookAvailable(true);
+        } else {
+            libraryControlView.showText("The book Is Not available");
         }
     }
 
@@ -70,19 +72,35 @@ public class LibraryControlModel {
                 matchingBooks.add(book);
             }
         }
-        libraryControlView.printBookDetails(matchingBooks);
+        if(!matchingBooks.isEmpty()) {
+            libraryControlView.printBookDetails(matchingBooks);
+        } else {
+            libraryControlView.showText("No Book are available OR No Matches are found ");
+        }
     }
 
 
     public void generateBookReport() {
-        libraryControlView.printBookDetails(bookList);
+        if(!bookList.isEmpty()) {
+            libraryControlView.printBookDetails(bookList);
+        } else {
+            libraryControlView.showText("Book List Is Empty");
+        }
     }
 
     public void generateMemberReport() {
-        libraryControlView.printMemberDetails(memberList);
+        if(!memberList.isEmpty()) {
+            libraryControlView.printMemberDetails(memberList);
+        } else {
+            libraryControlView.showText("Library List Is Empty");
+        }
     }
     public void generateTransactionReport() {
-        libraryControlView.printTransactionDetails(transactionList);
+        if(!transactionList.isEmpty()) {
+            libraryControlView.printTransactionDetails(transactionList);
+        } else {
+            libraryControlView.showText("Transaction List is Empty");
+        }
     }
 
 }

@@ -12,7 +12,7 @@ public class Faculty {
         this.department = department;
     }
 
-    // Getters and setters
+
     public int getId() {
         return id;
     }
