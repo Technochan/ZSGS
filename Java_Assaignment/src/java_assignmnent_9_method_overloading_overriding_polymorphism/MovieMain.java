@@ -56,7 +56,7 @@ class ThrillerMovie extends Movie {
 public class MovieMain {
     public static void main(String[] args) {
         Movie movie1 = new RomComMovie("Vaaranam Aayiram", 5, "Surya", "Sameera");
-        Movie movie2 = new ThrillerMovie("Conjuriring", 1, "Veronica","James Wan");
+        Movie movie2 = new ThrillerMovie("Conjuring", 1, "Veronica","James Wan");
 
         System.out.println(movie1.getMovieDetails());
         System.out.println(movie2.getMovieDetails());
