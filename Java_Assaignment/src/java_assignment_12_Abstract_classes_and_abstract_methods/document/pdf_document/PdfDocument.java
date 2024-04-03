@@ -13,16 +13,16 @@ public class PdfDocument extends Document {
     }
     @Override
     public String open() {
-        return "The file "+ super.getFileName()+ " is closing..." ;
+        return "The file "+ super.getFileName()+ " is opening..." ;
     }
 
     @Override
     public String save() {
-        return "The file "+super.getFileName()+ " is closing...";
+        return "The file "+super.getFileName()+ " is saving...";
     }
-
+    @Override
     public String getDetails(){
-        return open() + " \n "+save()+" \n "+ super.close();
+        return open() + " \n "+save()+" \n "+ super.close()+"\n";
     }
 
 

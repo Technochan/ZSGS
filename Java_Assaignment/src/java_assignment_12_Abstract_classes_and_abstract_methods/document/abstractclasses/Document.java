@@ -10,6 +10,7 @@ public abstract class Document {
 
     public abstract String open() ;
     public abstract String save();
+    public abstract String getDetails();
     public String close(){
         return "The file "+ fileName + " is closing...";
     }
@@ -17,5 +18,4 @@ public abstract class Document {
     public String getFileName(){
         return fileName;
     }
-
 }
