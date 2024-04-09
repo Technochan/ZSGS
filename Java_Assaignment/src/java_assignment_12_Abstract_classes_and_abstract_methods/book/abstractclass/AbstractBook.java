@@ -1,8 +1,9 @@
 package java_assignment_12_Abstract_classes_and_abstract_methods.book.abstractclass;
 
-import java_assignment_12_Abstract_classes_and_abstract_methods.book.model.UserDetails;
+
 
 public abstract class AbstractBook {
+
     protected int id;
     protected String title;
     protected String author;

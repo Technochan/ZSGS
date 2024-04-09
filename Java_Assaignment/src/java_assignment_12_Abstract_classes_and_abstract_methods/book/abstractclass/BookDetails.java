@@ -2,7 +2,6 @@ package java_assignment_12_Abstract_classes_and_abstract_methods.book.abstractcl
 
 import java_assignment_12_Abstract_classes_and_abstract_methods.book.database.BookDatabase;
 import java_assignment_12_Abstract_classes_and_abstract_methods.book.exceptionclass.UnauthorizedAccessError;
-import java_assignment_12_Abstract_classes_and_abstract_methods.book.model.UserDetails;
 
 import java.util.Scanner;
 

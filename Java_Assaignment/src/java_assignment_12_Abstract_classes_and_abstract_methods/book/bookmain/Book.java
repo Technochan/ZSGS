@@ -13,6 +13,7 @@ public class Book {
         UserDetails admin = new UserDetails(1,"Admin","Admin123");
         UserDetails userOne = new UserDetails(2,"UserOne","UserOne123");
         UserDetails userTwo = new UserDetails(2,"UserTwo","UserTwo123");
+        BookDatabase.getInstance().insertAdminCredentials(admin.getUsername(), admin.getUserPassword());
         BookDatabase.getInstance().insertUserList(userOne);
         BookDatabase.getInstance().insertUserList(userTwo);
         bookOne.updateBookDetail();
