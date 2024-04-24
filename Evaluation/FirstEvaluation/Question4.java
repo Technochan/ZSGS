@@ -1,4 +1,4 @@
-package Evaluation;
+package FirstEvaluation;
 
 import java.util.Scanner;
 // Find the largest sum of contiguous subarray which should not have negative numbers

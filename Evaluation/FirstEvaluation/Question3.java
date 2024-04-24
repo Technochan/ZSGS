@@ -1,4 +1,4 @@
-package Evaluation;
+package FirstEvaluation;
 
 import java.util.Scanner;
 // Getting huge numbers as separate digits and store them and calculate
