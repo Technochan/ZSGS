@@ -1,7 +1,14 @@
 package Rajee_san_SudokuSolverTask;
 
 public class SudokuSolver {
-    private final int MAP_LENGTH = 9;
+    private final int MAP_LENGTH ;
+    private final int SUB_BOX;
+
+    public SudokuSolver(int mapLength,int subBox) {
+        MAP_LENGTH = mapLength;
+        SUB_BOX = subBox;
+    }
+
     public boolean solveSudoku(int[][] map){
         for(int i = 0 ; i < MAP_LENGTH; i++){
             for(int j = 0 ; j < MAP_LENGTH ; j++){
@@ -43,52 +50,40 @@ public class SudokuSolver {
     }
 
     public boolean checkInSubBox(int[][] map,int row,int col,int num){
-        int subBoxRow = row - row % 3;
-        int subBoxCol = col - col % 3;
+        int subBoxRow = row - row % SUB_BOX;
+        int subBoxCol = col - col % SUB_BOX;
 
-        for(int i = subBoxRow ; i < 3; i++){
-            for(int j = subBoxCol ; j < 3 ; j++){
+        for(int i = subBoxRow ; i < SUB_BOX; i++){
+            for(int j = subBoxCol ; j < SUB_BOX ; j++){
                 if(map[i][j] == num) return true;
             }
         }
         return false;
     }
 
-    public void printMap(int[][] map){
-        System.out.println("+-------+-------+-------+");
-        for(int i = 0 ; i < 9; i++){
+    public void printMap(int[][] map) {
+        linePrint(MAP_LENGTH*3);
+
+        for (int i = 0; i < MAP_LENGTH; i++) {
             System.out.print("| ");
-            for(int j = 0 ; j < 9 ; j++){
+            for (int j = 0; j < MAP_LENGTH; j++) {
                 System.out.print(map[i][j] + " ");
-                if ((j + 1) % 3 == 0)
+                if ((j + 1) % SUB_BOX == 0)
                     System.out.print("| ");
             }
             System.out.println();
-            if ((i + 1) % 3 == 0)
-                System.out.println("+-------+-------+-------+");
+            if ((i + 1) % SUB_BOX == 0)
+                linePrint(MAP_LENGTH*3);
         }
     }
 
-
-    public static void main(String[] args) {
-        SudokuSolver sudokuSolver = new SudokuSolver();
-        int[][] map = {
-                {9, 0, 0, 8, 4, 1, 3, 0, 0},
-                {0, 0, 1, 9, 0, 0, 4, 2, 0},
-                {0, 0, 0, 2, 0, 0, 0, 1, 0},
-                {8, 7, 0, 1, 0, 0, 5, 4, 0},
-                {1, 5, 0, 3, 6, 0, 0, 0, 2},
-                {2, 0, 0, 0, 0, 0, 7, 6, 0},
-                {7, 2, 0, 0, 0, 5, 1, 9, 0},
-                {6, 3, 0, 0, 0, 0, 2, 0, 7},
-                {0, 1, 5, 7, 0, 2, 0, 0, 8} };
-        System.out.println("Before Solving");
-        sudokuSolver.printMap(map);
-        if (sudokuSolver.solveSudoku(map)) {
-            System.out.println("After Solving");
-            sudokuSolver.printMap(map);
-        } else {
-            System.out.println("Solution Not Found");
+    private void linePrint(int width) {
+        System.out.print("+");
+        for (int i = 0; i < width - 2; i++) {
+            System.out.print("-");
         }
+        System.out.println("+");
     }
+
+
 }

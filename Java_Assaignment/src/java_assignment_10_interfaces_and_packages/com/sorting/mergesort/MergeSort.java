@@ -37,7 +37,7 @@ public class MergeSort implements Sortable {
             }
             k++;
         }
-        // it may be possible that one of the arrays is not complete So copy the remaining elemetns
+
         while (i < m) {
             mix[k] = arr[i];
             i++;
