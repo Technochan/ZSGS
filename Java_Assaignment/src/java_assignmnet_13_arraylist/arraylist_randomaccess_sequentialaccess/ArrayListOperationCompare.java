@@ -1,5 +1,7 @@
 package java_assignmnet_13_arraylist.arraylist_randomaccess_sequentialaccess;
 
+// Write a program that compares the performance of different operations on ArrayLists with different capacities and data access patterns (random access vs. sequential access)
+
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -11,41 +13,61 @@ public class ArrayListOperationCompare {
         int[] accessPatternSizes = {1000, 10000, 100000};
         Random random = new Random();
 
-        System.out.println("Capacity \t Access Pattern \t Add - ms \tGet - ms \t Remove - ms");
+        System.out.println("Capacity \t Access Pattern \t Random Access Add - ms \t Random Access Get - ms \t Sequential Access Add - ms \t Sequential Access Get - ms \t Remove Random - ms \t Remove Sequential - ms");
 
         for (int capacity : capacities) {
             for (int accessPatternSize : accessPatternSizes) {
                 ArrayList<Integer> arrayList = new ArrayList<>(capacity);
 
-                //Here I Adding the Random Numbers
+                // Adding random numbers
                 for (int i = 0; i < capacity; i++) {
                     arrayList.add(random.nextInt());
                 }
 
-                //Here I Measuring the time for the add operation
-                long addStartTime = System.nanoTime();
+                //This is Random Access
+                long randomAddStartTime = System.currentTimeMillis();
                 for (int i = 0; i < accessPatternSize; i++) {
                     arrayList.add(random.nextInt());
                 }
-                long addElapsedTime = (System.nanoTime() - addStartTime) / 1000000;
+                long randomAddElapsedTime = System.currentTimeMillis() - randomAddStartTime;
 
-                //Here I  Measuring the time for the get operation in random access
-                long getRandomStartTime = System.nanoTime();
+                long randomGetStartTime = System.currentTimeMillis();
                 for (int i = 0; i < accessPatternSize; i++) {
                     int index = random.nextInt(capacity);
                     arrayList.get(index);
                 }
-                long getRandomElapsedTime = (System.nanoTime() - getRandomStartTime) / 1000000;
+                long randomGetElapsedTime = System.currentTimeMillis() - randomGetStartTime;
 
-                //Here I  Measuring the time for the Remove operation
-                long removeStartTime = System.nanoTime();
+                //This is Sequential Access
+                long sequentialAddStartTime = System.currentTimeMillis();
+                for (int i = 0; i < accessPatternSize; i++) {
+                    arrayList.add(i);
+                }
+                long sequentialAddElapsedTime = System.currentTimeMillis() - sequentialAddStartTime;
+
+                long sequentialGetStartTime = System.currentTimeMillis();
+                for (int i = 0; i < accessPatternSize; i++) {
+                    arrayList.get(i);
+                }
+                long sequentialGetElapsedTime = System.currentTimeMillis() - sequentialGetStartTime;
+
+                // Remove Operation
+                long randomRemoveStartTime = System.currentTimeMillis();
+                for (int i = 0; i < accessPatternSize; i++) {
+                    int index = random.nextInt(arrayList.size());
+                    arrayList.remove(index);
+                }
+                long randomRemoveElapsedTime = System.currentTimeMillis() - randomRemoveStartTime;
+
+                long removeStartTime = System.currentTimeMillis();
                 for (int i = 0; i < accessPatternSize; i++) {
                     arrayList.remove(0);
                 }
-                long removeElapsedTime = (System.nanoTime() - removeStartTime) / 1000000;
+                long removeElapsedTime = System.currentTimeMillis() - removeStartTime;
 
-                System.out.println(capacity + "\t\t\t" + accessPatternSize + "\t\t\t" + addElapsedTime + "\t\t\t" +
-                        getRandomElapsedTime + "\t\t\t" + removeElapsedTime);
+
+                System.out.println(capacity + "\t\t" + accessPatternSize + "\t\t" + randomAddElapsedTime + "\t\t\t\t" +
+                        randomGetElapsedTime + "\t\t\t" + sequentialAddElapsedTime + "\t\t\t" + sequentialGetElapsedTime + "\t\t\t" + randomRemoveElapsedTime + "\t\t\t" + removeElapsedTime);
             }
         }
     }

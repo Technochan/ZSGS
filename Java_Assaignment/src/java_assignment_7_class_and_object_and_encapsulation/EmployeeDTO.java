@@ -1,5 +1,5 @@
 package java_assignment_7_class_and_object_and_encapsulation;
-
+// Create an Employee DTO class. Create appropriate instance variables, static variables and methods with appropriate access modifiers. Maintain encapsulation by giving controlled access to employee's PII.
 public class EmployeeDTO {
     // Instance variables Declaration
     private final int employeeId;

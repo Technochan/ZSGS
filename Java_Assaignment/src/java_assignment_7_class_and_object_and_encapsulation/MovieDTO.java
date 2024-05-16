@@ -1,5 +1,6 @@
 package java_assignment_7_class_and_object_and_encapsulation;
 
+// Create a Movie DTO class
 import java.util.ArrayList;
 
 public class MovieDTO {

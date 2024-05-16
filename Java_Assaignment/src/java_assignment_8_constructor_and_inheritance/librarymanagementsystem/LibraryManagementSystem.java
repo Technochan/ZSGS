@@ -1,6 +1,6 @@
 package java_assignment_8_constructor_and_inheritance.librarymanagementsystem;
 
-import java.util.ArrayList;
+// Create classes for the given class diagram
 import java.util.List;
 
 public class LibraryManagementSystem {

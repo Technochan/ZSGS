@@ -1,7 +1,7 @@
 package Java_Assaignments_3;
 
 import java.util.Scanner;
-
+// Take three numbers from the user and print the greatest number.
 public class MaxNum {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);

@@ -1,5 +1,5 @@
 package java_assignment_7_class_and_object_and_encapsulation;
-
+// Create Flight DTO class. Create appropriate instance variables, static variables and methods with appropriate access modifiers.
 public class FlightDTO {
 
     // Instance variables

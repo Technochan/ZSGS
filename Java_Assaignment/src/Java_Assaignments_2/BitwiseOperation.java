@@ -1,11 +1,10 @@
 package Java_Assaignments_2;
 
 import java.util.Scanner;
-
+// Get two numbers from user and perform bitwise AND< OR, XOR, left and right shift operations on them.
 public class BitwiseOperation {
     public static void main(String[] args) {
-        //Get two numbers from user and perform bitwise
-        //AND< OR, XOR, left and right shift operations on them.
+
 
         Scanner scan = new Scanner(System.in);
         System.out.println("Checking all types of bitwise operators");

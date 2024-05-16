@@ -1,5 +1,5 @@
 package java_assignment_8_constructor_and_inheritance;
-
+// Create Vehicle Hierarchy
 // Base class representing a generic Vehicle
 class Vehicle {
     private String companyName;

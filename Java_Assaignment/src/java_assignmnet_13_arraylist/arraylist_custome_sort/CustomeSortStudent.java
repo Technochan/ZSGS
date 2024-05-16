@@ -1,5 +1,9 @@
 package java_assignmnet_13_arraylist.arraylist_custome_sort;
 
+
+// Write a program that sorts an ArrayList of custom objects based on a specific property using a custom comparator class implementing the Comparator interface.
+
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;

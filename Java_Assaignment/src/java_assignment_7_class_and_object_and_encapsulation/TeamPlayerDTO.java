@@ -1,5 +1,5 @@
 package java_assignment_7_class_and_object_and_encapsulation;
-
+//  Write two DTO classes to exhibit the has-a relationship given in the diagram
 import java.util.ArrayList;
 import java.util.List;
 

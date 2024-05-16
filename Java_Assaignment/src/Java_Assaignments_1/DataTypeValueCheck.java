@@ -1,5 +1,6 @@
 package Java_Assaignments_1;
 
+// Write a program to demonstrate compatible type conversions. For eg., float to int, double to float, int to short
 public class DataTypeValueCheck{
     public static void main(String[] args) {
         byte byteValue = 100;

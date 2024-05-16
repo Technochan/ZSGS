@@ -1,6 +1,6 @@
 package Java_Assaignments_2;
 
-import java.sql.SQLOutput;
+// Write a program to convert Celsius to Fahrenheit using appropriate datatypes and literal conventions
 import java.util.Scanner;
 
 public class HeatConvertor {
@@ -15,6 +15,7 @@ public class HeatConvertor {
         fahrenheit = (celsius * 9 / 5 ) + 32;
         System.out.println("Celsius "+ celsius +" to Fahrenheit is : "+ fahrenheit);
 
+        //Convert Fahrenheit to Celsius
         System.out.println();
         System.out.println("Fahrenheit to Celsius Conversion");
         System.out.println("Enter the Fahrenheit Ex(10.0)  : ");

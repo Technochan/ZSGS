@@ -1,7 +1,7 @@
 package Java_Assaignments_1;
 
 import java.util.Random;
-
+// Write a program to print a random number
 public class RandomNum {
     public static void main(String[] args) {
         int start = 10000;
@@ -14,8 +14,9 @@ public class RandomNum {
             System.out.println(random);
         }
         System.out.println();
-        System.out.println("Way 2");
+
         // Other way using Random Class
+        System.out.println("Way 2");
         Random rd = new Random();
 
         int x = 1000;

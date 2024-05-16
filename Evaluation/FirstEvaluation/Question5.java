@@ -11,17 +11,15 @@ public class Question5 {
         int[][] mat = new int[n][n];
         int outerSide = 0;
         int innerSide = n-1;
-        int num = 0;
         while(outerSide <= innerSide){
-            num = num == 0 ? 1 : 0;
             for(int i = outerSide ; i <= innerSide ; i++){
-                mat[outerSide][i] = num;
-                mat[innerSide][i] = num;
-                mat[i][outerSide] = num;
-                mat[i][innerSide] = num;
+                mat[outerSide][i] = 1;
+                mat[innerSide][i] = 1;
+                mat[i][outerSide] = 1;
+                mat[i][innerSide] = 1;
             }
-            outerSide++;
-            innerSide--;
+            outerSide+=2;
+            innerSide-=2;
         }
         print(mat);
     }

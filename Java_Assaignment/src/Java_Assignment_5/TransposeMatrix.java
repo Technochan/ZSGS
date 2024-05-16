@@ -1,6 +1,6 @@
 package Java_Assignment_5;
 
-import java.util.Arrays;
+// Write a program to find transpose of a matrix
 import java.util.Scanner;
 
 public class TransposeMatrix {

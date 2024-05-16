@@ -1,5 +1,5 @@
 package Java_Assaignments_3;
-
+// Create a program that takes a student's score as input and outputs their corresponding grade.
 import java.util.ArrayList;
 import java.util.Scanner;
 

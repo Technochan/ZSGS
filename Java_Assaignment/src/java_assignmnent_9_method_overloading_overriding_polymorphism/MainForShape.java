@@ -1,4 +1,8 @@
 package java_assignmnent_9_method_overloading_overriding_polymorphism;
+
+// Use the hierarchy of shape classes done already in previous assignments. Demonstrate polymorphism by calculating area and perimeter of various shapes.
+
+
 abstract class ShapePolymorphismDemo {
     private double width;
     private double height;

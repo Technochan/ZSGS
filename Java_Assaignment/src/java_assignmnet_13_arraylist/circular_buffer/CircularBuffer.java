@@ -1,7 +1,7 @@
 package java_assignmnet_13_arraylist.circular_buffer;
 
 import java.util.ArrayList;
-
+// Create a class implementing a circular buffer using an ArrayList of Strings for a messaging service. This buffer should have a fixed size and overwrite the oldest element when full.
 public class CircularBuffer {
     private ArrayList<String> buffer;
     private int capacity;
@@ -32,7 +32,7 @@ public class CircularBuffer {
         System.out.println("Contents of the Circular Buffer:");
         for (int i = 0; i < size; i++) {
             int index = (head + i) % capacity;
-            System.out.println( buffer.get(index));
+            System.out.println(buffer.get(index));
         }
     }
 
@@ -40,13 +40,23 @@ public class CircularBuffer {
         CircularBuffer cb = new CircularBuffer(4);
 
         cb.addMessage("First message");
+        cb.displayBuffer();
+        System.out.println(); cb.displayBuffer();
+        System.out.println();
         cb.addMessage("Second message");
+        cb.displayBuffer();
+        System.out.println();
         cb.addMessage("Third message");
+        cb.displayBuffer();
+        System.out.println();
         cb.addMessage("Fourth message");
         cb.displayBuffer();
         System.out.println();
 
+        // Override
         cb.addMessage("Fifth message");
+        cb.displayBuffer(); System.out.println();
+
         cb.addMessage("Sixth message");
         cb.displayBuffer();
     }

@@ -1,6 +1,6 @@
 package java_assignment_8_constructor_and_inheritance;
 
-import java.lang.reflect.Array;
+// Add a constructor to the Book class alreday created. Write a function to add books using constructors to an array of <Book> objects, and display all the books added.
 import java.util.ArrayList;
 
 public class Book {

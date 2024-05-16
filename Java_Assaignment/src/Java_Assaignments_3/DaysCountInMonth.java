@@ -1,7 +1,7 @@
 package Java_Assaignments_3;
 
 import java.util.Scanner;
-
+// Write a Java program to find the number of days in a given month and year.
 public class DaysCountInMonth {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);

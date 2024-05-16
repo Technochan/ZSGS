@@ -1,7 +1,5 @@
 package Java_Assaignments_2;
 
-import java.sql.SQLOutput;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 //Write a program to calculate a person's Body Mass Index on

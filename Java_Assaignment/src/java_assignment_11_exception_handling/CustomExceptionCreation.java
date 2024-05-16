@@ -1,6 +1,8 @@
 package java_assignment_11_exception_handling;
 
 
+// Create a custom Exception by yourself and try throwing and catching the same.
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 

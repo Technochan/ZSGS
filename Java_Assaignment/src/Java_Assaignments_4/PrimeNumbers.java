@@ -1,5 +1,5 @@
 package Java_Assaignments_4;
-
+//  Write a program to print prime numbers between 1 to 30
 public class PrimeNumbers {
     public static void main(String[] args) {
         int start = 1;

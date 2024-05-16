@@ -1,5 +1,6 @@
 package Java_Assignment_6;
 
+// Write a program to validate email address (contains @ and proper domain format). Note: Don't use regular expressions
 import java.util.Scanner;
 
 public class EmailVerification {

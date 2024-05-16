@@ -1,5 +1,5 @@
 package Java_Assignment_5;
-
+// Write a program to implement matrix multiplication
 import java.util.Scanner;
 
 public class MatrixMultiplication {

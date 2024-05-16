@@ -1,5 +1,5 @@
 package java_assignment_8_constructor_and_inheritance;
-
+// Write a hierarchy of geometric shape classes 'Circle', 'Rectangle', etc inherited from a common base class 'Shape'
 abstract class Shape {
     private double width;
     private double height;

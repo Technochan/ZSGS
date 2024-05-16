@@ -1,10 +1,9 @@
 package Java_Assaignments_2;
 
 import java.util.Scanner;
-
+// Write a program to convert time entered in seconds to HH:mm:ss format
 public class SecondsProblem {
 
-    //Write a program to convert time entered in seconds to HH:mm:ss format
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter the Value in Seconds to get HH:MM:SS Formate: ");

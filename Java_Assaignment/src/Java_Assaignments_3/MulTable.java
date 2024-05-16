@@ -1,7 +1,7 @@
 package Java_Assaignments_3;
 
 import java.util.Scanner;
-
+// Write a program to print multiplication table of a given number in a neat format
 public class MulTable {
 	public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);

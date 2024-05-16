@@ -1,5 +1,6 @@
 package Java_Assaignments_1;
 
+// Create multiple classes in single file and compile and explore how many .class files are generated.
 // after compiling this file i got 5 .class files
 public class ClassFileCheck {
     public static void main(String[] args) {

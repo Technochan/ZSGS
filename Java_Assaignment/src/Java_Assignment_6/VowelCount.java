@@ -1,5 +1,5 @@
 package Java_Assignment_6;
-
+//  Create a program to count vowels in a given string using string functions
 import java.util.Scanner;
 
 public class VowelCount {

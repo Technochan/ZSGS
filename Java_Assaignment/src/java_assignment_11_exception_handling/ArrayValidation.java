@@ -1,6 +1,7 @@
 package java_assignment_11_exception_handling;
 
-import java.lang.reflect.Array;
+// Write program to demonstrate ArrayIndexOutOfBoundsException
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 

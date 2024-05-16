@@ -1,7 +1,7 @@
 package Java_Assaignments_2;
 
 import java.util.Scanner;
-
+// Write a program to solve a quadratic equation (ax^2+bx+c). Take a,b and c from user and use quadratic formula.
 public class Equation {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);

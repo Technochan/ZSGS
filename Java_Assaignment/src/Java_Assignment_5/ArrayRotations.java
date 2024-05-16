@@ -1,5 +1,5 @@
 package Java_Assignment_5;
-
+// Create a program that rotates the elements of an array to the right by a specified number of positions. Get the array and the rotation count from the user
 import java.util.Arrays;
 import java.util.Scanner;
 

@@ -1,5 +1,5 @@
 package Java_Assaignments_1;
-
+// Write a program to swap the two given numbers
 public class Swapping {
     public static void main(String[] args) {
         // Swapping the two Numbers

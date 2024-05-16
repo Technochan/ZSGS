@@ -1,5 +1,5 @@
 package Java_Assaignments_3;
-
+// Write a program to print factorial of a given number using loop
 import java.util.Scanner;
 public class FactorialCalculation {
 	public static void main(String[] args) {

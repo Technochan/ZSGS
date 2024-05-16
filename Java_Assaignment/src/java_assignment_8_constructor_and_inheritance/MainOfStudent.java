@@ -1,5 +1,6 @@
 package java_assignment_8_constructor_and_inheritance;
 
+// Design a Student Parent class and ZSGSStudent Child class. Create constructors in both class with varying number of parameters. Call parent constructor from child constructor. Try experimenting by creating child object using parent constructor.
 class Student {
     private String name;
     private int age;

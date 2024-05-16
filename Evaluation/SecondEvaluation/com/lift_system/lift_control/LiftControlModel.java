@@ -54,10 +54,10 @@ public class LiftControlModel {
             if( ((currentFloor == 0 || lift.getAcccessStartFloorLimit() <= currentFloor)&& (destinationFloor == 0 || destinationFloor <= lift.getAcccessEndFloorLimit()) )
                  && ((lift.getCurrentFloor() >= currentFloor || lift.getCurrentFloor() <= currentFloor) && (lift.getCurrentFloor() > floor || lift.getCurrentFloor() < floor))
                  && lift.getWorking()){
-                if((lift.getAcccessEndFloorLimit() - lift.getAcccessStartFloorLimit() < minTravel) || lift.getAcccessStartFloorLimit() - lift.getAcccessEndFloorLimit() > minTravel){
+                if((lift.getAcccessEndFloorLimit() - lift.getCurrentFloor() < minTravel)){
                     preferedLift = lift;
                     floor = lift.getCurrentFloor();
-                    minTravel = lift.getAcccessEndFloorLimit() - lift.getAcccessStartFloorLimit();
+                    minTravel = lift.getAcccessEndFloorLimit() - lift.getCurrentFloor();
                 }
             }
         }
@@ -71,10 +71,10 @@ public class LiftControlModel {
             if( ((currentFloor == 0 || lift.getAcccessStartFloorLimit() <= currentFloor) && (destinationFloor == 0 || destinationFloor <= lift.getAcccessEndFloorLimit()) )
                 && ((lift.getCurrentFloor() >= currentFloor || lift.getCurrentFloor() <= currentFloor)  && (lift.getCurrentFloor() >=  floor || lift.getCurrentFloor() <=  floor))
                 && lift.getWorking()){
-                if(lift.getAcccessEndFloorLimit() - lift.getAcccessStartFloorLimit() < minTravel || lift.getAcccessStartFloorLimit() - lift.getAcccessEndFloorLimit() > minTravel ){
+                if(lift.getAcccessEndFloorLimit() - lift.getCurrentFloor() < minTravel ){
                     preferedLift = lift;
                     floor = lift.getCurrentFloor();
-                    minTravel = lift.getAcccessEndFloorLimit() - lift.getAcccessStartFloorLimit();
+                    minTravel = lift.getAcccessEndFloorLimit() - lift.getCurrentFloor();
                 }
             }
         }

@@ -1,5 +1,6 @@
 package java_assignmnent_9_method_overloading_overriding_polymorphism;
 
+//  In Vehicle hierarchy, add methods like start and stop in Vehicle and override them in Child classes.
 
 abstract class Vehicle {
     abstract void start();

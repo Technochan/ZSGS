@@ -1,5 +1,5 @@
 package java_assignment_7_class_and_object_and_encapsulation;
-
+// Create Book DTO class with attributes like title, ISBN etc. Create appropriate instance variables, static variables and methods with appropriate access modifiers.
 public class BookDTO {
     // Instance variables Declaration
     private int bookId;

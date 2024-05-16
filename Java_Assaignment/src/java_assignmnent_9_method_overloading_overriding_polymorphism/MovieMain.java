@@ -1,5 +1,7 @@
 package java_assignmnent_9_method_overloading_overriding_polymorphism;
 
+// Create hierarchy from Movie class with Child classes of different genre movies like RomComMovie, ThrillerMovie, etc. Demonstrate polymorphism using them.
+
 class Movie {
     private String movieName;
     private int songsCount;
