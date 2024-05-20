@@ -1,4 +1,4 @@
-package SecondEvaluation.com.lift_system.model;
+package SecondEvaluation.com.zsgs.lift_application.model;
 
 public class Lift {
 

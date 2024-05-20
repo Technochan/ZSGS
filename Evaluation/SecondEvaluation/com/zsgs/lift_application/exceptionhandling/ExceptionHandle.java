@@ -1,5 +1,6 @@
-package SecondEvaluation.com.lift_system.exceptionhandling;
-import SecondEvaluation.com.lift_system.erroemessage.ErrorMessage;
+package SecondEvaluation.com.zsgs.lift_application.exceptionhandling;
+import SecondEvaluation.com.zsgs.lift_application.erroemessage.ErrorMessage;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 

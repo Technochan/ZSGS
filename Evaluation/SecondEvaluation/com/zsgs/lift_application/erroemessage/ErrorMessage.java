@@ -1,4 +1,4 @@
-package SecondEvaluation.com.lift_system.erroemessage;
+package SecondEvaluation.com.zsgs.lift_application.erroemessage;
 
 public class ErrorMessage {
     public static void printErrorMessage(String message) {
