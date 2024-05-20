@@ -29,6 +29,8 @@ public class MyStack<T> {
     public T pop(){
         if(isEmpty())
             return (T) "sorry";
+//            throw new NoSuchElementException("Queue is Empty");
+
         T data = head.data;
         head = head.next;
         size--;
@@ -41,6 +43,8 @@ public class MyStack<T> {
     public T peek(){
         if(isEmpty())
             return (T) "sorry";
+//            throw new NoSuchElementException("Queue is Empty");
+
         return head.data;
 
     }
